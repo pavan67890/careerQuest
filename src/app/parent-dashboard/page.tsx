@@ -23,8 +23,8 @@ export default function ParentDashboardPage() {
                 </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
-                <Card className="lg:col-span-3">
+            <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
+                <Card className="lg:col-span-1">
                     <CardHeader>
                         <CardTitle className="font-headline">Aptitude Scores</CardTitle>
                         <CardDescription>Visual representation of test results.</CardDescription>
@@ -34,53 +34,54 @@ export default function ParentDashboardPage() {
                     </CardContent>
                 </Card>
 
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="font-headline flex items-center gap-2"><Star /> Strengths</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-wrap gap-2">
-                       <Badge variant="default">Problem Solving</Badge>
-                       <Badge variant="default">Creativity</Badge>
-                       <Badge variant="default">Leadership</Badge>
-                    </CardContent>
-                </Card>
-                 <Card>
-                    <CardHeader>
-                        <CardTitle className="font-headline flex items-center gap-2"><Sparkles /> Passions</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-wrap gap-2">
-                       <Badge variant="secondary">Technology</Badge>
-                       <Badge variant="secondary">Art</Badge>
-                       <Badge variant="secondary">Music</Badge>
-                    </CardContent>
-                </Card>
-                
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="font-headline flex items-center gap-2"><BrainCircuit /> Recommended Careers</CardTitle>
-                        <CardDescription>Based on AI analysis.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <Card className="bg-secondary/50">
-                            <CardHeader className="p-4">
-                                <CardTitle className="text-md">Software Engineer</CardTitle>
-                                <CardDescription className="text-xs">Matches logical skills and tech passion.</CardDescription>
-                            </CardHeader>
-                        </Card>
-                         <Card className="bg-secondary/50">
-                            <CardHeader className="p-4">
-                                <CardTitle className="text-md">UX/UI Designer</CardTitle>
-                                <CardDescription className="text-xs">Combines creativity with technology.</CardDescription>
-                            </CardHeader>
-                        </Card>
-                         <Card className="bg-secondary/50">
-                            <CardHeader className="p-4">
-                                <CardTitle className="text-md">Data Scientist</CardTitle>
-                                <CardDescription className="text-xs">Excellent for analytical minds.</CardDescription>
-                            </CardHeader>
-                        </Card>
-                    </CardContent>
-                </Card>
+                <div className="space-y-6">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="font-headline flex items-center gap-2 text-xl"><Star /> Strengths</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex flex-wrap gap-2">
+                           <Badge variant="default">Problem Solving</Badge>
+                           <Badge variant="default">Creativity</Badge>
+                           <Badge variant="default">Leadership</Badge>
+                        </CardContent>
+                    </Card>
+                     <Card>
+                        <CardHeader>
+                            <CardTitle className="font-headline flex items-center gap-2 text-xl"><Sparkles /> Passions</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex flex-wrap gap-2">
+                           <Badge variant="secondary">Technology</Badge>
+                           <Badge variant="secondary">Art</Badge>
+                           <Badge variant="secondary">Music</Badge>
+                        </CardContent>
+                    </Card>
+                    
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="font-headline flex items-center gap-2 text-xl"><BrainCircuit /> Recommended Careers</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <Card className="bg-secondary/50">
+                                <CardHeader className="p-3">
+                                    <CardTitle className="text-md">Software Engineer</CardTitle>
+                                    <CardDescription className="text-xs">Matches logical skills and tech passion.</CardDescription>
+                                </CardHeader>
+                            </Card>
+                             <Card className="bg-secondary/50">
+                                <CardHeader className="p-3">
+                                    <CardTitle className="text-md">UX/UI Designer</CardTitle>
+                                    <CardDescription className="text-xs">Combines creativity with technology.</CardDescription>
+                                </CardHeader>
+                            </Card>
+                             <Card className="bg-secondary/50">
+                                <CardHeader className="p-3">
+                                    <CardTitle className="text-md">Data Scientist</CardTitle>
+                                    <CardDescription className="text-xs">Excellent for analytical minds.</CardDescription>
+                                </CardHeader>
+                            </Card>
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
         </div>
     )
