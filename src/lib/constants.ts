@@ -5,4 +5,5 @@ export const navLinks = [
   { href: "/career-arena", label: "Career Arena" },
   { href: "/alumni", label: "Alumni" },
   { href: "/study-hub", label: "Study Hub" },
+  { href: "/ai-consultant", label: "AI Consultant" },
 ];
