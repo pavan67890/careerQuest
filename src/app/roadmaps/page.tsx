@@ -11,52 +11,15 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ChevronsUpDown, Loader2, Play, Footprints } from "lucide-react"
 import { getRoadmapDescription } from "@/ai/flows/interactive-roadmap-explorer-descriptions"
+import { after10th, after12th, boardGameSteps, type RoadmapItem } from "@/lib/roadmap-data"
 
-type RoadmapItem = {
-  title: string
-  children?: RoadmapItem[]
-}
 
-const flowchartData: RoadmapItem = {
-  title: "High School Stream (Science)",
-  children: [
-    {
-      title: "Bachelor's Degree (B.Tech in CS)",
-      children: [
-        {
-          title: "Entry-Level Job (Software Engineer)",
-          children: [
-            { title: "Higher Studies (M.Tech or MBA)" },
-            { title: "Specialization (AI/ML, Cybersecurity)" },
-          ],
-        },
-        {
-          title: "Internship",
-          children: [{ title: "Full-Time Offer" }],
-        },
-      ],
-    },
-    {
-      title: "Bachelor's Degree (MBBS)",
-      children: [
-        {
-          title: "Residency (Doctor)",
-          children: [
-            { title: "Specialization (Cardiology, Neurology)" },
-          ],
-        },
-      ],
-    },
-  ],
-}
-
-const boardGameSteps = [
-  "Choose Stream", "Prepare for Entrance Exams", "Select College", "First Year", "Internship", "Final Year Project", "Graduate", "First Job", "Promotion"
-]
 
 function FlowchartNode({ item }: { item: RoadmapItem }) {
   const [description, setDescription] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const isLeafNode = !item.children || item.children.length === 0;
+
 
   const fetchDescription = async () => {
     if (description || isLoading) return
@@ -71,7 +34,7 @@ function FlowchartNode({ item }: { item: RoadmapItem }) {
     }
   }
 
-  if (!item.children) {
+  if (isLeafNode) {
     return (
         <div className="ml-8 pl-4 py-2 border-l border-dashed">
             <p className="font-semibold">{item.title}</p>
@@ -82,9 +45,9 @@ function FlowchartNode({ item }: { item: RoadmapItem }) {
   return (
     <Collapsible className="ml-8 pl-4 border-l border-dashed">
       <CollapsibleTrigger asChild>
-        <Button variant="ghost" className="w-full justify-between" onClick={fetchDescription}>
+        <Button variant="ghost" className="w-full justify-between text-left h-auto py-2" onClick={fetchDescription}>
           <span className="font-semibold">{item.title}</span>
-          <ChevronsUpDown className="h-4 w-4" />
+          <ChevronsUpDown className="h-4 w-4 shrink-0" />
         </Button>
       </CollapsibleTrigger>
       <CollapsibleContent className="space-y-2 p-2">
@@ -99,6 +62,14 @@ function FlowchartNode({ item }: { item: RoadmapItem }) {
       </CollapsibleContent>
     </Collapsible>
   )
+}
+
+function RoadmapFlow({root}: {root: RoadmapItem}) {
+    return (
+        <div className="p-2 bg-secondary font-semibold rounded-md text-center mb-4">
+            {root.title}
+        </div>
+    )
 }
 
 export default function RoadmapExplorerPage() {
@@ -128,18 +99,24 @@ export default function RoadmapExplorerPage() {
           Visualize your career journey in two different and exciting ways.
         </p>
       </div>
-      <Tabs defaultValue="flowchart" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
-          <TabsTrigger value="flowchart">Flowchart Mode</TabsTrigger>
+      <Tabs defaultValue="after-12th" className="w-full">
+        <TabsList className="grid w-full grid-cols-3 max-w-lg mx-auto">
+          <TabsTrigger value="after-12th">After 12th</TabsTrigger>
+          <TabsTrigger value="after-10th">After 10th</TabsTrigger>
           <TabsTrigger value="boardgame">Board Game Mode</TabsTrigger>
         </TabsList>
-        <TabsContent value="flowchart" className="mt-8">
+        <TabsContent value="after-12th" className="mt-8">
           <div className="max-w-3xl mx-auto p-6 border rounded-lg shadow-lg">
-            <h2 className="text-xl font-headline font-semibold mb-4 text-center">Career Flowchart</h2>
-            <div className="p-2 bg-secondary font-semibold rounded-md text-center mb-4">
-                {flowchartData.title}
-            </div>
-            {flowchartData.children?.map((item, index) => (
+            <h2 className="text-xl font-headline font-semibold mb-4 text-center">Career Paths After 12th</h2>
+            {after12th.map((item, index) => (
+              <FlowchartNode key={index} item={item} />
+            ))}
+          </div>
+        </TabsContent>
+         <TabsContent value="after-10th" className="mt-8">
+          <div className="max-w-3xl mx-auto p-6 border rounded-lg shadow-lg">
+            <h2 className="text-xl font-headline font-semibold mb-4 text-center">Career Paths After 10th</h2>
+            {after10th.map((item, index) => (
               <FlowchartNode key={index} item={item} />
             ))}
           </div>
