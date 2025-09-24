@@ -6,7 +6,7 @@ import Footer from '@/components/layout/footer'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'CareerCompass - AI Career & Education Navigator',
+  title: 'CareerQuest - AI Career & Education Navigator',
   description: 'One-Stop AI Career & Education Advisor',
 }
 

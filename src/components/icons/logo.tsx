@@ -40,7 +40,7 @@ export function Logo({ className }: { className?: string }) {
             strokeLinejoin="round"
             />
         </svg>
-        <span className="font-headline text-xl font-bold">CareerCompass</span>
+        <span className="font-headline text-xl font-bold">CareerQuest</span>
     </div>
   );
 }

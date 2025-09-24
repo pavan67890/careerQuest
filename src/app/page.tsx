@@ -39,7 +39,7 @@ export default function Home() {
                 One-Stop AI Career & Education Advisor
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                CareerCompass helps students and parents navigate the complexities of career and education planning with personalized, AI-driven insights.
+                CareerQuest helps students and parents navigate the complexities of career and education planning with personalized, AI-driven insights.
               </p>
               <div className="space-x-4">
                 <Button asChild size="lg">
