@@ -12,11 +12,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-// Re-exporting useTheme from a local provider to avoid direct dependency on next-themes in other components
-import { useTheme as useAppTheme } from "./theme-provider"
-
 export function ModeToggle() {
-  const { setTheme } = useAppTheme()
+  const { setTheme } = useTheme()
 
   return (
     <DropdownMenu>
