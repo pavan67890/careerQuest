@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Badge } from '@/components/ui/badge'
 import { Linkedin, Briefcase } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const alumniData = [
   {
