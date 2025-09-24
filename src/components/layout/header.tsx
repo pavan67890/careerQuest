@@ -84,7 +84,7 @@ export default function Header() {
             <Button asChild variant="secondary" className="mr-2">
                 <Link href="/parent-dashboard">Parent Mode</Link>
             </Button>
-            <ModeToggle />
+            {isClient && <ModeToggle />}
           </nav>
         </div>
       </div>
