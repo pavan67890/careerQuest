@@ -12,8 +12,47 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Logo } from "@/components/icons/logo"
 import { ModeToggle } from "@/components/mode-toggle"
 
-export default function Header() {
+function NavMenu() {
   const pathname = usePathname()
+  return (
+    <>
+      {navLinks.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === link.href ? "text-foreground" : "text-foreground/60"
+          )}
+        >
+          {link.label}
+        </Link>
+      ))}
+    </>
+  )
+}
+
+function MobileNavMenu() {
+    const pathname = usePathname()
+    return (
+        <>
+        {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "text-lg",
+                pathname === link.href ? "font-semibold" : "text-muted-foreground"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </>
+    )
+}
+
+export default function Header() {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
@@ -28,18 +67,7 @@ export default function Header() {
             <Logo />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {isClient && navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "transition-colors hover:text-foreground/80",
-                  pathname === link.href ? "text-foreground" : "text-foreground/60"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {isClient && <NavMenu />}
           </nav>
         </div>
 
@@ -60,18 +88,7 @@ export default function Header() {
               <Logo />
             </Link>
             <div className="flex flex-col space-y-4">
-              {isClient && navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "text-lg",
-                    pathname === link.href ? "font-semibold" : "text-muted-foreground"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {isClient && <MobileNavMenu />}
             </div>
           </SheetContent>
         </Sheet>
