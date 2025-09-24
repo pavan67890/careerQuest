@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "home-banner",
+      "description": "An illustrative banner with an AI and student journey feel.",
+      "imageUrl": "https://images.unsplash.com/photo-1758270704384-9df36d94a29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwam91cm5leXxlbnwwfHx8fDE3NTg3Mzg0OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "student journey"
+    },
+    {
+      "id": "alumni-1",
+      "description": "Photo of alumni Jane Doe.",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NTg2Nzk5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "alumni-2",
+      "description": "Photo of alumni John Smith.",
+      "imageUrl": "https://images.unsplash.com/photo-1568316674077-d72ee56de61c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzU4Njg2NDg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "alumni-3",
+      "description": "Photo of alumni Emily White.",
+      "imageUrl": "https://images.unsplash.com/photo-1712727352951-e6ebf76f14da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHwlMjBzbWlsaW5nJTIwd29tYW58ZW58MHx8fHwxNzU4NzM4NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": " smiling woman"
+    },
+    {
+      "id": "alumni-4",
+      "description": "Photo of alumni Michael Brown.",
+      "imageUrl": "https://images.unsplash.com/photo-1629185752040-57f6fa9b4f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbWlsaW5nJTIwbWFufGVufDB8fHx8MTc1ODY3NzM0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling man"
+    },
+    {
+      "id": "alumni-5",
+      "description": "Photo of alumni Sarah Green.",
+      "imageUrl": "https://images.unsplash.com/photo-1664813495434-34ac9ab3b5b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMG91dGRvb3JzfGVufDB8fHx8MTc1ODcyNDYxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman outdoors"
+    },
+    {
+      "id": "alumni-6",
+      "description": "Photo of alumni David Black.",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBvZmZpY2V8ZW58MHx8fHwxNzU4NzE5Mjg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man office"
+    },
+    {
+      "id": "ebook-1",
+      "description": "Thumbnail for a Physics eBook.",
+      "imageUrl": "https://images.unsplash.com/photo-1725870494794-abc47f0158a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwdGV4dGJvb2t8ZW58MHx8fHwxNzU4NzA3MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science textbook"
+    },
+    {
+      "id": "ebook-2",
+      "description": "Thumbnail for a Chemistry eBook.",
+      "imageUrl": "https://images.unsplash.com/photo-1709535876680-da4e031ea2ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaXN0cnklMjB0ZXh0Ym9va3xlbnwwfHx8fDE3NTg2NDg2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chemistry textbook"
+    },
+    {
+      "id": "ebook-3",
+      "description": "Thumbnail for a Math eBook.",
+      "imageUrl": "https://images.unsplash.com/photo-1758685733395-dba201403b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYXRoJTIwdGV4dGJvb2t8ZW58MHx8fHwxNzU4NzM4NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "math textbook"
+    },
+    {
+      "id": "ebook-4",
+      "description": "Thumbnail for a Public Speaking skills book.",
+      "imageUrl": "https://images.unsplash.com/photo-1710360683896-e0506fb3579a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwdWJsaWMlMjBzcGVha2luZ3xlbnwwfHx8fDE3NTg3MDc0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "public speaking"
+    },
+    {
+      "id": "ebook-5",
+      "description": "Thumbnail for a Govt resources guide.",
+      "imageUrl": "https://images.unsplash.com/photo-1624417963912-8532660d9de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb3Zlcm5tZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzU4NjgzMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "government building"
+    },
+    {
+      "id": "parent-avatar",
+      "description": "Avatar for parent dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    }
+  ]
 }
