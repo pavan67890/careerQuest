@@ -264,7 +264,7 @@ export default function CareerTestPage() {
     <div className="container py-12">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-headline font-bold text-center mb-2">Career Aptitude Test</h1>
+          <h1 className="text-3xl font-headline font-bold text-center mb-2">Career Test</h1>
           <p className="text-center text-muted-foreground">Answer these questions to discover your ideal career path.</p>
         </div>
         
@@ -313,5 +313,3 @@ export default function CareerTestPage() {
     </div>
   )
 }
-
-    
