@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
+import { useState, useEffect } from "react"
 
 import { navLinks } from "@/lib/constants"
 import { cn } from "@/lib/utils"
@@ -13,6 +14,11 @@ import { ModeToggle } from "@/components/mode-toggle"
 
 export default function Header() {
   const pathname = usePathname()
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,7 +28,7 @@ export default function Header() {
             <Logo />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.map((link) => (
+            {isClient && navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -54,7 +60,7 @@ export default function Header() {
               <Logo />
             </Link>
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {isClient && navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
