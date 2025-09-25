@@ -1,4 +1,3 @@
-"use client"
 
 import { careerProfiles, type CareerProfile } from "@/lib/career-test-results-data";
 import { notFound } from "next/navigation";
