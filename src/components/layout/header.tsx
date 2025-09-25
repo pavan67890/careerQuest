@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
-import { useState, useEffect } from "react"
 
 import { navLinks } from "@/lib/constants"
 import { cn } from "@/lib/utils"
@@ -11,6 +10,8 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Logo } from "@/components/icons/logo"
 import { ModeToggle } from "@/components/mode-toggle"
+import { useState, useEffect } from "react"
+import { HeaderClientItems } from "./header-client-items"
 
 function NavMenu() {
   const pathname = usePathname()
