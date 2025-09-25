@@ -53,21 +53,22 @@ function MobileNavMenu() {
 }
 
 export default function Header() {
-  const [isClient, setIsClient] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setIsClient(true)
+    setMounted(true)
   }, [])
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            {isClient && <Logo />}
+            <Logo />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {isClient && <NavMenu />}
+            <NavMenu />
           </nav>
         </div>
 
@@ -85,10 +86,10 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="left">
             <Link href="/" className="mb-6">
-              {isClient && <Logo />}
+              <Logo />
             </Link>
             <div className="flex flex-col space-y-4">
-              {isClient && <MobileNavMenu />}
+              <MobileNavMenu />
             </div>
           </SheetContent>
         </Sheet>
@@ -101,7 +102,7 @@ export default function Header() {
             <Button asChild variant="secondary" className="mr-2">
                 <Link href="/parent-dashboard">Parent Mode</Link>
             </Button>
-            {isClient && <ModeToggle />}
+             {mounted && <ModeToggle />}
           </nav>
         </div>
       </div>
