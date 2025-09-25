@@ -64,7 +64,7 @@ export default function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo />
+            {isClient && <Logo />}
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {isClient && <NavMenu />}
@@ -85,7 +85,7 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="left">
             <Link href="/" className="mb-6">
-              <Logo />
+              {isClient && <Logo />}
             </Link>
             <div className="flex flex-col space-y-4">
               {isClient && <MobileNavMenu />}
