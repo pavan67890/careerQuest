@@ -33,8 +33,8 @@ export default function CareerArenaPage() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {careers.map((career) => (
-          <Card key={career.name} className="shadow-lg hover:shadow-xl transition-shadow">
+        {careers.map((career, i) => (
+          <Card key={career.name} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-in fade-in-50" style={{animationDelay: `${i * 100}ms`}}>
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{career.name}</CardTitle>
               <CardDescription>Attribute Comparison</CardDescription>

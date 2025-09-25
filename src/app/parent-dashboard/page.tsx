@@ -24,7 +24,7 @@ export default function ParentDashboardPage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
-                <Card className="lg:col-span-1">
+                <Card className="lg:col-span-1 animate-in fade-in-50 duration-500">
                     <CardHeader>
                         <CardTitle className="font-headline">Aptitude Scores</CardTitle>
                         <CardDescription>Visual representation of test results.</CardDescription>
@@ -35,7 +35,7 @@ export default function ParentDashboardPage() {
                 </Card>
 
                 <div className="space-y-6">
-                    <Card>
+                    <Card className="animate-in fade-in-50 duration-500 delay-100">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-2 text-xl"><Star /> Strengths</CardTitle>
                         </CardHeader>
@@ -45,7 +45,7 @@ export default function ParentDashboardPage() {
                            <Badge variant="default">Leadership</Badge>
                         </CardContent>
                     </Card>
-                     <Card>
+                     <Card className="animate-in fade-in-50 duration-500 delay-200">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-2 text-xl"><Sparkles /> Passions</CardTitle>
                         </CardHeader>
@@ -56,7 +56,7 @@ export default function ParentDashboardPage() {
                         </CardContent>
                     </Card>
                     
-                    <Card>
+                    <Card className="animate-in fade-in-50 duration-500 delay-300">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-2 text-xl"><BrainCircuit /> Recommended Careers</CardTitle>
                         </CardHeader>
