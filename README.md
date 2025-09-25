@@ -29,6 +29,50 @@ This project is built with a modern, robust, and scalable technology stack:
 - **Animations:** [Tailwind CSS Animate](https://tailwindcss.com/docs/animation)
 - **Forms:** [React Hook Form](https://react-hook-form.com/) & [Zod](https://zod.dev/)
 
-## 🏁 Getting Started
+## 🏁 Project Tour & Getting Started
 
-To get started with the project, simply explore the different pages and features available in the navigation bar. The main entry point for the application is `src/app/page.tsx`.
+Welcome to the CareerQuest codebase! This guide will walk you through the main features and where to find their corresponding files.
+
+### 1. The Homepage (`src/app/page.tsx`)
+
+This is the main entry point of the application. It provides a brief introduction to CareerQuest and includes quick links to the most important features.
+
+- **UI:** `src/app/page.tsx`
+- **Data:** Placeholder images are managed in `src/lib/placeholder-images.ts`.
+
+### 2. The Career Test (`src/app/career-test/`)
+
+This is the core interactive feature for students. It's a 20-question quiz that leads to a personalized career profile.
+
+- **Test Page:** `src/app/career-test/page.tsx` contains the logic for displaying questions and collecting answers.
+- **Questions:** The test questions are stored in `src/lib/career-test-questions.ts`.
+- **Results Page:** `src/app/career-test/results/[profile]/page.tsx` is a dynamic page that displays the career profile based on the user's results.
+- **Results Data:** The mock data for the different career profiles is located in `src/lib/career-test-results-data.ts`.
+
+### 3. AI-Powered Features (`src/ai/flows/`)
+
+CareerQuest uses Genkit for its generative AI capabilities. The core AI logic is defined in "flows".
+
+- **AI Consultant Chatbot:** `src/ai/flows/ai-consultant-chatbot.ts` defines the AI prompt and logic for the chatbot. The UI for this feature is in `src/app/ai-consultant/page.tsx`.
+- **AI Career Suggestions:** `src/ai/flows/ai-career-suggestion.ts` contains the logic for generating personalized career advice. The front-end form and results display are in `src/app/career-suggestion/page.tsx`.
+
+### 4. Exploring Career Paths
+
+- **Interactive Roadmaps:** `src/app/roadmaps/page.tsx` allows users to explore educational and career paths in a nested, collapsible flowchart. The data for these roadmaps is in `src/lib/roadmap-data.ts`.
+- **Career Arena:** `src/app/career-arena/page.tsx` provides a side-by-side comparison of different careers, complete with progress bars to visualize attributes like salary and work-life balance.
+- **Timeline Tracker:** `src/app/timeline-tracker/page.tsx` displays a vertical timeline of key milestones, including detailed mock data for college applications.
+
+### 5. Resources and Inspiration
+
+- **Alumni Stories:** `src/app/alumni/page.tsx` showcases inspiring stories from alumni with a cool hover effect to reveal their journey.
+- **Study Hub:** `src/app/study-hub/page.tsx` acts as a digital library for e-books and other learning resources.
+
+### 6. Parent Dashboard (`src/app/parent-dashboard/page.tsx`)
+
+A dedicated view for parents to see an overview of their child's profile, including aptitude charts, strengths, and recommended careers. The chart component is located at `src/components/parent-dashboard/aptitude-chart.tsx`.
+
+### 7. Layout and Components
+
+- **Main Layout:** `src/app/layout.tsx` is the root layout for the entire application.
+- **Header:** `src/components/layout/header.tsx` contains the main navigation and theme toggle.
+- **UI Components:** Reusable UI components (Buttons, Cards, etc.) are located in `src/components/ui/`. These are based on ShadCN UI.
