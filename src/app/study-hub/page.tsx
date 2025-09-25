@@ -1,6 +1,5 @@
-import Image from 'next/image'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
+
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from '@/components/ui/button'
 
 const categories = ["All", "Subject-wise", "Skills", "Govt Resources"];
@@ -33,21 +32,13 @@ export default function StudyHubPage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {ebooks.map((ebook) => {
-          const image = PlaceHolderImages.find((img) => img.id === ebook.id)
           return (
             <Card key={ebook.id} className="overflow-hidden group shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
               <CardContent className="p-0">
-                {image && (
-                  <Image
-                    src={image.imageUrl}
-                    alt={ebook.title}
-                    data-ai-hint={image.imageHint}
-                    width={400}
-                    height={500}
-                    className="w-full h-auto object-cover aspect-[4/5] transition-transform duration-300 group-hover:scale-105"
-                  />
-                )}
-                <div className="p-4">
+                <div className="flex items-center justify-center p-4 bg-secondary aspect-[4/5] group-hover:bg-primary/20 transition-colors">
+                    <h3 className="font-headline text-center font-semibold text-lg text-secondary-foreground">{ebook.title}</h3>
+                </div>
+                <div className="p-4 bg-card">
                   <h3 className="font-semibold text-sm truncate">{ebook.title}</h3>
                 </div>
               </CardContent>
